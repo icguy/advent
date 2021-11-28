@@ -21,6 +21,27 @@ body {
 	z-index: -10;
 }
 
+#monke {
+    background: rgba(0, 0, 0, 0.7);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: opacity .7s cubic-bezier(0.22, 1, 0.36, 1);
+	z-index: -10;
+	opacity: 0;
+}
+
+#monke>img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#monke.visible {
+	z-index: 10;
+	opacity: 100%;
+}
+
 .main {
 	display: flex;
 	flex-direction: column;
@@ -102,4 +123,8 @@ body {
 	89% {
 		color: rgb(127,0,255);
 	}
+}
+
+.hidden {
+	visibility: hidden;
 }
