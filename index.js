@@ -1,7 +1,8 @@
 $(() => {
 	let $wrapper = $(".days-wrapper");
-	let $monke = $("#monke");
-	let $monkeImg = $monke.children("img");
+	let $overlay = $("#overlay");
+	let $monkeImg = $("#monke");
+	let $backArrow = $("#back");
 
 	let nowDay = new Date().getDate();
 	let isLive = window.location.href.includes("icguy.github.io");
@@ -16,8 +17,14 @@ $(() => {
 		if (!isVisible(num))
 			return;
 		$monkeImg.attr("src", "assets/a.jpg");
-		$monke.addClass("visible");
+		$overlay.addClass("visible");
 	}
+
+	function onBackClick() {
+		$overlay.removeClass("visible");
+	}
+
+	$backArrow.on("click", () => onBackClick());
 
 	for (let i = 0; i < 6; i++) {
 		let $row = $(`<div class="row"></div>`);
@@ -30,7 +37,7 @@ $(() => {
 			if (dayNum == 24)
 				classes.push("rainbow");
 			let $cell = $(`<div class="${classes.join(" ")}">${dayNum}</div>`);
-			$cell.on("click", () => { onDayClick(dayNum) });
+			$cell.on("click", () => onDayClick(dayNum));
 			$row.append($cell);
 		}
 	}
