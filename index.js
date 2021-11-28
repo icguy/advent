@@ -18,10 +18,14 @@ $(() => {
 			return;
 		$monkeImg.attr("src", "assets/a.jpg");
 		$overlay.addClass("visible");
+		$overlay.addClass("front");
 	}
 
 	function onBackClick() {
 		$overlay.removeClass("visible");
+		setTimeout(() => {
+			$overlay.removeClass("front");
+		}, 400);
 	}
 
 	$backArrow.on("click", () => onBackClick());

@@ -32,11 +32,10 @@ body {
 }
 
 #overlay.front {
-	
+	z-index: 10;
 }
 
 #overlay.visible {
-	z-index: 10;
 	opacity: 100%;
 }
 
