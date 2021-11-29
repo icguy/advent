@@ -47,9 +47,13 @@ $(() => {
 	function onDayClick(num) {
 		if (!isVisible(num))
 			return;
-		$monkeImg.attr("src", `assets/days/${getFilename(num)}`);
-		$overlay.addClass("visible");
-		$overlay.addClass("front");
+
+		$monkeImg.removeAttr("src");
+		setTimeout(() => {
+			$monkeImg.attr("src", `assets/days/${getFilename(num)}`);
+			$overlay.addClass("visible");
+			$overlay.addClass("front");
+		});
 	}
 
 	function onBackClick() {
