@@ -36,12 +36,16 @@ $(() => {
 	let $backArrow = $("#back");
 
 	let nowDay = new Date().getDate();
+	let nowMonth = new Date().getMonth();
 	let isLive = window.location.href.includes("icguy.github.io");
 
 	function isVisible(num) {
-		return isLive
-			? num <= nowDay
-			: num !== 10;
+		if (isLive) {
+			return nowMonth === 11 && num <= nowDay;
+		}
+		else {
+			return num !== 10;
+		}
 	}
 
 	function onDayClick(num) {
