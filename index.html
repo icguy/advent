@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Advent monkez</title>
+	<title>Advent dogoz</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 
@@ -20,18 +20,19 @@
 	<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
 	<script>
 		var sf = new Snowflakes({
-			color: "#c7eefa"
+			color: "#c7eefa",
+			zIndex: 5
 		});
 	</script>
 	<img id="bg" src="assets/bg.jpg">
 	<div id="overlay">
-		<img id="monke">
+		<video id="monke" playsinline muted loop autoplay></video>
 		<img id="back" src="assets/arrow.png">
 	</div>
 	<div class="main">
 		<div class="title">
 			<img src="assets/star.png" class="star">
-			<span>MONKEH ADVENT!</span>
+			<span>DOGGO ADVENT!</span>
 			<img src="assets/star.png" class="star">
 		</div>
 		<div class="days-wrapper"></div>
