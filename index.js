@@ -25,6 +25,8 @@ let filenames = [
 	"24.mp4"
 ];
 
+let hasSound = [20];
+
 function getFilename(num) {
 	return filenames[num - 1];
 }
@@ -44,7 +46,7 @@ $(() => {
 			return nowMonth === 11 && num <= nowDay;
 		}
 		else {
-			return num !== 10;
+			return true;
 		}
 	}
 
@@ -55,6 +57,8 @@ $(() => {
 		$monkeImg.removeAttr("src");
 		setTimeout(() => {
 			$monkeImg.attr("src", `assets/days/${getFilename(num)}`);
+			$monkeImg.attr("muted", !hasSound.includes(num));
+			$monkeImg.attr("playsinline", !hasSound.includes(num));
 			$overlay.addClass("visible");
 			$overlay.addClass("front");
 		});
@@ -62,6 +66,8 @@ $(() => {
 
 	function onBackClick() {
 		$overlay.removeClass("visible");
+		$monkeImg[0].pause();
+		$monkeImg[0].currentTime = 0;
 		setTimeout(() => {
 			$overlay.removeClass("front");
 		}, 400);
