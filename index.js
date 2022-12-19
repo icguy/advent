@@ -85,7 +85,7 @@ $(() => {
 				classes.push("hidden");
 			if (dayNum == 24)
 				classes.push("rainbow");
-			let $cell = $(`<div class="${classes.join(" ")}">${dayNum}</div>`);
+			let $cell = $(`<button class="${classes.join(" ")}">${dayNum}</button>`);
 			$cell.on("click", () => onDayClick(dayNum));
 			$row.append($cell);
 		}

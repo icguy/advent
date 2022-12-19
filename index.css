@@ -94,6 +94,11 @@ body {
 	line-height: 2em;
 	text-align: center;
 	width: 2em;
+	
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
 }
 
 .demo {
