@@ -2,7 +2,7 @@ let filenames = [
 	"01.mp4",
 	"02.mp4",
 	"03.mp4",
-	"04.mp4",
+	"04.jpg",
 	"05.mp4",
 	"06.mp4",
 	"07.mp4",
@@ -20,21 +20,26 @@ let filenames = [
 	"19.mp4",
 	"20.mp4",
 	"21.mp4",
-	"22.mp4",
+	"22.jpg",
 	"23.mp4",
 	"24.mp4"
 ];
 
-let hasSound = [20];
+let hasSound = [];
 
 function getFilename(num) {
 	return filenames[num - 1];
 }
 
+function isVideo(filename) {
+	return filename.endsWith(".mp4");
+}
+
 $(() => {
 	let $wrapper = $(".days-wrapper");
 	let $overlay = $("#overlay");
-	let $monkeImg = $("#monke");
+	let $monkeVid = $("#monkeVid");
+	let $monkeImg = $("#monkeImg");
 	let $backArrow = $("#back");
 
 	let nowDay = new Date().getDate();
@@ -54,20 +59,33 @@ $(() => {
 		if (!isVisible(num))
 			return;
 
-		$monkeImg.removeAttr("src");
-		setTimeout(() => {
-			$monkeImg.attr("src", `assets/days/${getFilename(num)}`);
-			$monkeImg.attr("muted", !hasSound.includes(num));
-			$monkeImg.attr("playsinline", !hasSound.includes(num));
+		let filename = getFilename(num);
+		let assetPath = `assets/days/${getFilename(num)}`;
+		if (isVideo(filename)) {
+			$monkeVid.show();
+			$monkeImg.hide();
+			$monkeVid.removeAttr("src");
+			setTimeout(() => {
+				$monkeVid.attr("src", assetPath);
+				$monkeVid.attr("muted", !hasSound.includes(num));
+				$monkeVid.attr("playsinline", !hasSound.includes(num));
+				$overlay.addClass("visible");
+				$overlay.addClass("front");
+			});
+		}
+		else {
+			$monkeVid.hide();
+			$monkeImg.show();
+			$monkeImg.attr("src", assetPath);
 			$overlay.addClass("visible");
 			$overlay.addClass("front");
-		});
+		}
 	}
 
 	function onBackClick() {
 		$overlay.removeClass("visible");
-		$monkeImg[0].pause();
-		$monkeImg[0].currentTime = 0;
+		$monkeVid[0].pause();
+		$monkeVid[0].currentTime = 0;
 		setTimeout(() => {
 			$overlay.removeClass("front");
 		}, 400);
