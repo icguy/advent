@@ -1,8 +1,8 @@
 let filenames = [
 	"01.mp4",
-	"02.mp4",
-	"03.mp4",
-	"04.jpg",
+	"02.webp",
+	"03.webp",
+	"04.webp",
 	"05.mp4",
 	"06.mp4",
 	"07.mp4",
@@ -20,7 +20,7 @@ let filenames = [
 	"19.mp4",
 	"20.mp4",
 	"21.mp4",
-	"22.jpg",
+	"22.mp4",
 	"23.mp4",
 	"24.mp4"
 ];
@@ -42,13 +42,14 @@ $(() => {
 	let $monkeImg = $("#monkeImg");
 	let $backArrow = $("#back");
 
+	let now = new Date();
 	let nowDay = new Date().getDate();
-	let nowMonth = new Date().getMonth();
-	let isLive = window.location.href.includes("icguy.github.io") && !window.location.href.includes("?icdebug");
+	let liveAfter = new Date('2024-01-01T00:00:00+01:00');
+	let isLive = (window.location.href.includes("icguy.github.io") && !window.location.href.includes("?icdebug")) || window.location.href.includes("?live");
 
 	function isVisible(num) {
 		if (isLive) {
-			return nowMonth === 11 && num <= nowDay;
+			return now >= liveAfter && num <= nowDay;
 		}
 		else {
 			return true;
