@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Overlay from "./Overlay";
 import Row from "./Row";
 
@@ -11,17 +12,21 @@ export default function App() {
 		[21, 22, 23, 24],
 	];
 
+	let [overlayNum, setOverlayNum] = useState(undefined);
+
+	let overlay = overlayNum !== undefined ? <Overlay id="overlay" num={overlayNum} onBack={() => setOverlayNum(undefined)}></Overlay> : <></>;
+
 	return <>
 		<img id="bg" src="assets/bg.jpg"></img>
-		<Overlay id="overlay"></Overlay>
+		{overlay}
 		<div className="main">
 			<div className="title">
 				<img src="assets/star.png" className="star"></img>
-				<span>KITEN ADVENT!</span>
+				<span>KITEN BDAY!</span>
 				<img src="assets/star.png" className="star"></img>
 			</div>
 			<div className="days-wrapper">
-				{rows.map((r, i) => <Row key={i} nums={r}></Row>)}
+				{rows.map((r, i) => <Row key={i} nums={r} buttonClicked={num => setOverlayNum(num)}></Row>)}
 			</div>
 		</div>
 	</>;
