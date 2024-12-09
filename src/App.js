@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Overlay from "./Overlay";
 import Row from "./Row";
+import star from "./assets/star.png";
+import background from "./assets/bg.jpg";
 
 export default function App() {
 	let rows = [
@@ -17,13 +19,13 @@ export default function App() {
 	let overlay = overlayNum !== undefined ? <Overlay id="overlay" num={overlayNum} onBack={() => setOverlayNum(undefined)}></Overlay> : <></>;
 
 	return <>
-		<img id="bg" src="assets/bg.jpg"></img>
+		<img id="bg" src={background}></img>
 		{overlay}
 		<div className="main">
 			<div className="title">
-				<img src="assets/star.png" className="star"></img>
-				<span>KITEN BDAY!</span>
-				<img src="assets/star.png" className="star"></img>
+				<img src={star} className="star"></img>
+				<span>BLUREH XMOS!</span>
+				<img src={star} className="star"></img>
 			</div>
 			<div className="days-wrapper">
 				{rows.map((r, i) => <Row key={i} nums={r} buttonClicked={num => setOverlayNum(num)}></Row>)}

@@ -39,8 +39,7 @@ body {
 .monke-content {
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
-	filter: blur(20px);
+	object-fit: contain;
 }
 
 #back {
@@ -148,20 +147,4 @@ body {
 
 .hidden {
 	visibility: hidden;
-}
-
-.link-container {
-	top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.link-container a {
-    color: white;
-    text-align: center;
 }
