@@ -1,14 +1,15 @@
 import { contentsByDay } from "./content";
 import arrow from "./assets/arrow.png";
+import { isVisible } from "./visible-utils";
 
 export default function Overlay({ num, onBack }) {
 	let content = contentsByDay[num - 1];
 	function handleImgClick(e) {
 		let width = e.target.width;
 		let x = e.clientX;
-		if(x < width / 4 && num > 1)
+		if(x < width / 4 && num > 1 && isVisible(num - 1))
 			onBack(num - 1);
-		else if (x > width * 3 / 4 && num < contentsByDay.length)
+		else if (x > width * 3 / 4 && num < contentsByDay.length && isVisible(num + 1))
 			onBack(num + 1);
 	}
 	return <div id="overlay">
