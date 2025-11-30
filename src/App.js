@@ -16,7 +16,7 @@ export default function App() {
 
 	let [overlayNum, setOverlayNum] = useState(undefined);
 
-	let overlay = overlayNum !== undefined ? <Overlay id="overlay" num={overlayNum} onBack={() => setOverlayNum(undefined)}></Overlay> : <></>;
+	let overlay = overlayNum !== undefined ? <Overlay id="overlay" num={overlayNum} onBack={(num) => setOverlayNum(num)}></Overlay> : <></>;
 
 	return <>
 		<img id="bg" src={background}></img>
@@ -24,7 +24,7 @@ export default function App() {
 		<div className="main">
 			<div className="title">
 				<img src={star} className="star"></img>
-				<span>BLUREH XMOS!</span>
+				<span>ANGY XMOS!</span>
 				<img src={star} className="star"></img>
 			</div>
 			<div className="days-wrapper">
