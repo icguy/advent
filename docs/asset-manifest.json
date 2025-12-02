@@ -1,19 +1,40 @@
 {
   "files": {
     "main.css": "/advent/static/css/main.3272fb6c.css",
-    "main.js": "/advent/static/js/main.c7201430.js",
+    "main.js": "/advent/static/js/main.b110f553.js",
+    "static/media/15.png": "/advent/static/media/15.c9c9ccaad257336bfade.png",
+    "static/media/06.jpeg": "/advent/static/media/06.895759aa4a50a9ee4479.jpeg",
+    "static/media/10.jpeg": "/advent/static/media/10.2bbe08032dc9de1916c9.jpeg",
+    "static/media/18.jpeg": "/advent/static/media/18.a46b30648181753c9974.jpeg",
     "static/media/03.jpeg": "/advent/static/media/03.757eb68cb1c98238f25a.jpeg",
+    "static/media/05.jpeg": "/advent/static/media/05.adc8bda3e429a8f86c7d.jpeg",
+    "static/media/20.jpeg": "/advent/static/media/20.20ea7d70c6e0bf263787.jpeg",
+    "static/media/08.jpeg": "/advent/static/media/08.a0c481047dcedd0e48ba.jpeg",
+    "static/media/23.jpeg": "/advent/static/media/23.97568f2384afc8fbc247.jpeg",
     "static/media/02.jpeg": "/advent/static/media/02.004056e4b6f513b610cb.jpeg",
+    "static/media/14.jpeg": "/advent/static/media/14.43831ba0e773aec4d4ac.jpeg",
+    "static/media/07.png": "/advent/static/media/07.8672a8259ba7259d64d6.png",
+    "static/media/22.jpeg": "/advent/static/media/22.c83dd86530f5db2f28d9.jpeg",
     "static/media/01.webp": "/advent/static/media/01.76dd1207579d3097c789.webp",
     "static/media/bg.jpg": "/advent/static/media/bg.b3028cdfd257476aa3a7.jpg",
+    "static/media/13.jpg": "/advent/static/media/13.6baea947ef003d2c40a1.jpg",
+    "static/media/24.jpg": "/advent/static/media/24.df955d937b4556dd07fb.jpg",
+    "static/media/16.jpg": "/advent/static/media/16.99f1937d0836af2cc01a.jpg",
+    "static/media/04.jpeg": "/advent/static/media/04.e487a7268271e3e5fe94.jpeg",
+    "static/media/19.jpg": "/advent/static/media/19.5064ad106dfb632e9eef.jpg",
+    "static/media/09.jpeg": "/advent/static/media/09.6d7028b64442ad6af5a1.jpeg",
+    "static/media/17.jpeg": "/advent/static/media/17.87954c2523939c54e0ce.jpeg",
+    "static/media/21.jpg": "/advent/static/media/21.aaaee8f18429440b6802.jpg",
+    "static/media/11.jpg": "/advent/static/media/11.cd9b1489a5ceadad0fbb.jpg",
+    "static/media/12.jpg": "/advent/static/media/12.88bc5d4c87ae2f27c291.jpg",
     "static/media/star.png": "/advent/static/media/star.2decc8c7eddf2e16b148.png",
     "static/media/arrow.png": "/advent/static/media/arrow.2b6cf146b290a7370e24.png",
     "index.html": "/advent/index.html",
     "main.3272fb6c.css.map": "/advent/static/css/main.3272fb6c.css.map",
-    "main.c7201430.js.map": "/advent/static/js/main.c7201430.js.map"
+    "main.b110f553.js.map": "/advent/static/js/main.b110f553.js.map"
   },
   "entrypoints": [
     "static/css/main.3272fb6c.css",
-    "static/js/main.c7201430.js"
+    "static/js/main.b110f553.js"
   ]
 }
